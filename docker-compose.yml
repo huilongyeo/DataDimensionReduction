@@ -1,0 +1,12 @@
+services:
+  project:
+    image: rd-project
+    runtime: nvidia
+    ports:
+      - "50023:22"
+    volumes:
+      - ./:/File
+    environment:
+      - NVIDIA_VISIBLE_DEVICES=all
+    stdin_open: true
+    tty: true
